@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:padding="20dp"
+
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/judul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SIGN IN"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:layout_margin="20dp"
+        android:padding="30dp" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/judul"
+        android:hint=" Username"
+        android:backgroundTint="@color/white"
+        android:layout_margin="10dp"
+        android:textColorHint="@color/white"
+        android:drawableLeft="@drawable/baseline_person_24" />
+
+    <!-- RelativeLayout untuk EditText dan CheckBox -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/username"
+        android:id="@+id/input"
+        android:layout_margin="10dp">
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint=" Password"
+            android:backgroundTint="@color/white"
+            android:drawableLeft="@drawable/baseline_lock_24"
+            android:inputType="textPassword"
+            android:textColorHint="@color/white"
+            android:paddingEnd="50dp" />
+
+        <!-- CheckBox di dalam EditText (pojok kanan) -->
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/register"
+        android:layout_margin="5dp"
+        android:padding="20dp"
+        android:textColor="@color/ijo"
+        android:text="Lupa Sandi?" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/input"
+        android:layout_margin="20dp"
+        android:text="Login"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/black_muda"
+        android:layout_alignParentRight="true" />
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/input"
+        android:text="Register"
+        android:layout_margin="20dp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/black_muda"
+        android:layout_alignParentLeft="true" />
+
+
+
+</RelativeLayout>
